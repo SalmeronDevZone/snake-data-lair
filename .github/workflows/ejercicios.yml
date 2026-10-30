@@ -32,3 +32,18 @@ jobs:
         run: python -m unittest -v
         env:
           SOLUCIONES: "1"
+
+  python-sql:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ejercicios/python_sql
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Soluciones Python + SQL
+        run: python -m unittest -v
+        env:
+          SOLUCIONES: "1"

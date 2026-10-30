@@ -102,3 +102,63 @@ INSERT INTO empleados VALUES
     (5, 'Alba',  2,    'Datos'),
     (6, 'Raúl',  3,    'Plataforma'),
     (7, 'Nerea', 4,    'Datos');
+
+-- ---------------------------------------------------------------- segunda tanda (ejercicios 14-26)
+
+INSERT INTO tickets VALUES
+    (1, 'pan'), (1, 'leche'), (1, 'huevos'),
+    (2, 'pan'), (2, 'leche'),
+    (3, 'café'), (3, 'leche'),
+    (4, 'pan'), (4, 'huevos'),
+    (5, 'pan'), (5, 'leche'), (5, 'café'),
+    (6, 'cerveza'), (6, 'patatas'),
+    (7, 'cerveza'), (7, 'patatas'), (7, 'pan'),
+    (8, 'leche'), (8, 'huevos');
+
+INSERT INTO ventas_ancho VALUES
+    ('Madrid',  100, 120, NULL),
+    ('Sevilla', 80,  NULL, 95),
+    ('Bilbao',  60,  70,  75);
+
+INSERT INTO facturas_erp VALUES
+    ('F1', 100), ('F2', 250), ('F3', 75), ('F4', 300), ('F5', 60);
+
+INSERT INTO cobros_banco VALUES
+    ('F1', 100), ('F2', 240), ('F4', 300), ('F5', 60), ('F6', 90);
+
+INSERT INTO eventos_json VALUES
+    (1, '2025-03-10 09:00:00', '{"tipo": "compra", "cliente": {"id": 1, "pais": "ES"}, "importe": 49.9, "items": [{"sku": "A1", "uds": 1}]}'),
+    (2, '2025-03-10 09:05:00', '{"tipo": "compra", "cliente": {"id": 2, "pais": "PT"}, "importe": 120, "items": [{"sku": "B2", "uds": 2}, {"sku": "C3", "uds": 1}]}'),
+    (3, '2025-03-10 09:07:00', '{"tipo": "visita", "cliente": {"id": 1, "pais": "ES"}}'),
+    (4, '2025-03-10 09:30:00', '{"tipo": "compra", "cliente": {"id": 3, "pais": "ES"}, "importe": 15.5, "items": []}'),
+    (5, '2025-03-10 10:00:00', '{"tipo": "compra", "cliente": {"id": 2, "pais": "PT"}, "importe": 30, "items": [{"sku": "A1", "uds": 3}]}');
+
+INSERT INTO movimientos_stock VALUES
+    (1,  1, '2025-03-01', 10),
+    (2,  1, '2025-03-02', -3),
+    (3,  1, '2025-03-03', -4),
+    (4,  1, '2025-03-05', -5),
+    (5,  1, '2025-03-06', 8),
+    (6,  2, '2025-03-01', 5),
+    (7,  2, '2025-03-02', -5),
+    (8,  2, '2025-03-04', 2),
+    (9,  7, '2025-03-02', 3),
+    (10, 7, '2025-03-03', -1),
+    (11, 7, '2025-03-03', -1);
+
+INSERT INTO productos_replica SELECT id_producto, nombre, categoria, precio FROM productos;
+
+INSERT INTO cambios_productos VALUES
+    (1, 'U', 2,  'Ratón',               'Periféricos', 22),
+    (2, 'I', 9,  'Tableta',             'Portátiles',  300),
+    (3, 'D', 6,  NULL,                  NULL,          NULL),
+    (4, 'U', 9,  'Tableta 10 pulgadas', 'Portátiles',  280),
+    (5, 'U', 2,  'Ratón',               'Periféricos', 21),
+    (6, 'I', 10, 'Micrófono',           'Audio',       70),
+    (7, 'D', 10, NULL,                  NULL,          NULL);
+
+INSERT INTO precios VALUES
+    (1, '2025-03-01', 50),
+    (1, '2025-03-04', 45),
+    (5, '2025-03-02', 60),
+    (5, '2025-03-05', 55);

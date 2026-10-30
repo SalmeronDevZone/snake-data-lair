@@ -1,6 +1,6 @@
 # 🐍 snake-data-lair
 
-**SQL y Python para ingeniería de datos.** SQL en cinco motores (MySQL, Oracle, SQLite, SQL Server y Microsoft Fabric), PL/SQL, modelado dimensional y **22 ejercicios con corrección automática**.
+**SQL y Python para ingeniería de datos.** SQL en cinco motores (MySQL, Oracle, SQLite, SQL Server y Microsoft Fabric), PL/SQL, modelado dimensional y **45 ejercicios resueltos con corrección automática**.
 
 [![ejercicios](https://github.com/SalmeronDevZone/snake-data-lair/actions/workflows/ejercicios.yml/badge.svg)](https://github.com/SalmeronDevZone/snake-data-lair/actions/workflows/ejercicios.yml)
 ![SQL](https://img.shields.io/badge/SQL-MySQL%20%C2%B7%20Oracle%20%C2%B7%20SQLite%20%C2%B7%20T--SQL-4479A1?logo=mysql&logoColor=white)
@@ -11,13 +11,14 @@
 ```bash
 git clone https://github.com/SalmeronDevZone/snake-data-lair.git
 cd snake-data-lair/ejercicios/sql
-python comprobar.py           # ⏳ 13 pendientes: abre 01_importe_por_categoria.sql y a por ello
+python comprobar.py           # ⏳ 26 pendientes: abre 01_importe_por_categoria.sql y a por ello
 ```
 
 | Banco | Ejercicios | Lo más interesante |
 | --- | --- | --- |
-| [**SQL**](ejercicios/README.md#sql-13-ejercicios-en-sql) | 13 | Funciones de ventana, deduplicación de cargas, huecos e islas, sesionización, data quality checks, upsert incremental, **SCD tipo 2**, CTE recursivas |
+| [**SQL**](ejercicios/README.md#sql-26-ejercicios-en-sql) | 26 | Funciones de ventana, deduplicación de cargas, huecos e islas, sesionización, data quality checks, upsert incremental, **SCD tipo 2**, cohortes, RFM, conciliación, **JSON**, **aplicar CDC**, forward fill |
 | [**pandas**](ejercicios/README.md#pandas-9-ejercicios-en-pandas) | 9 | Limpieza de valores centinela, métricas derivadas, IQR, escritura particionada estilo data lake |
+| [**Python + SQL**](ejercicios/README.md#python--sql-10-ejercicios-en-python_sql) | 10 | Cargas transaccionales, consultas a prueba de inyección SQL, upserts, perfilado de datos, evolución de esquema, cargas por lotes |
 
 Cada ejercicio trae enunciado, pista y solución de referencia, y un corrector que compara tu resultado con el esperado. La CI comprueba en cada push que todas las soluciones siguen funcionando.
 
@@ -37,14 +38,18 @@ Cada ejercicio trae enunciado, pista y solución de referencia, y un corrector q
 
 | Concepto | Dónde practicarlo |
 | --- | --- |
-| Joins, agregaciones, subconsultas | `SQL/MYSQL/006_script01_Consultas.sql`, `SQL/LeetCode/`, ejercicios 01-02 |
-| Funciones de ventana | Ejercicios 03-08 |
-| Modelado dimensional y SCD | `SQL/T-SQL/fabric1.sql`, ejercicio 12 |
-| Cargas incrementales e idempotentes | Ejercicios 06 y 11 |
-| Calidad de datos | Ejercicio 10, ejercicios de pandas 2 y 8 |
+| Joins, agregaciones, subconsultas | `SQL/MYSQL/006_script01_Consultas.sql`, `SQL/LeetCode/`, ejercicios SQL 01, 02 y 17 |
+| Funciones de ventana | Ejercicios SQL 03-08, 14, 18, 19 y 24 |
+| Analítica de clientes | Cohortes (15), RFM (16), cesta de la compra (17) |
+| Modelado dimensional y SCD | `SQL/T-SQL/fabric1.sql`, ejercicio SQL 12 |
+| Cargas incrementales, idempotentes y CDC | Ejercicios SQL 06, 11 y 25; Python + SQL 2, 4 y 10 |
+| Calidad de datos y conciliación | Ejercicios SQL 10 y 22, pandas 2 y 8, Python + SQL 7 |
+| Datos semiestructurados (JSON) | Ejercicio SQL 23 |
+| Series temporales y calendarios | Ejercicios SQL 19, 20 y 26 |
+| Transacciones y seguridad | `SQL/MYSQL/009_script04_transacciones.sql`, Python + SQL 3 (inyección SQL) y 5 (atomicidad) |
 | Lógica procedimental en la base de datos | `SQL/PL-SQL/SampleHR/CodePL-SQL/` |
-| Transacciones y permisos | `SQL/MYSQL/009_script03_permisos_MySQL.sql`, `009_script04_transacciones.sql` |
-| Jerarquías | `Jerarquias.sql` (Oracle `CONNECT BY`) y ejercicio 13 (`WITH RECURSIVE`) |
+| Permisos | `SQL/MYSQL/009_script03_permisos_MySQL.sql` |
+| Jerarquías | `Jerarquias.sql` (Oracle `CONNECT BY`) y ejercicio SQL 13 (`WITH RECURSIVE`) |
 
 ---
 
