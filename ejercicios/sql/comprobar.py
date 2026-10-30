@@ -117,7 +117,7 @@ def comprobar_mis_ejercicios(rutas: list[Path]) -> int:
             print(f"✅ {ruta.stem}")
             correctos += 1
     total = len(rutas)
-    print(f"\n{correctos}/{total} correctos · {pendientes} pendientes")
+    print(f"\n{correctos}/{total} correctos · {pendientes} {'pendiente' if pendientes == 1 else 'pendientes'}")
     return 0 if correctos + pendientes == total else 1
 
 
