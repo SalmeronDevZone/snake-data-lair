@@ -69,7 +69,7 @@ WHERE id_empresa = 2;
 INSERT INTO Ofertas 
    ( id_empresa, titulo, descripcion, salario, ubicacion, fecha_publicacion, fecha_cierre)
 VALUES 
-    (7, 'Analista Power BI', 'Encargado de reporting', NULL, 'Sevilla', '2025-11-15', '2025-12-01');
+    (7, 'Analista de datos', 'Encargado de reporting', NULL, 'Sevilla', '2025-11-15', '2025-12-01');
 
 
 

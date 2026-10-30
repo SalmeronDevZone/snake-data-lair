@@ -1,0 +1,554 @@
+{
+ "01_importe_por_categoria": {
+  "columnas": [
+   "categoria",
+   "importe"
+  ],
+  "filas": [
+   [
+    "Portátiles",
+    1780
+   ],
+   [
+    "Monitores",
+    580
+   ],
+   [
+    "Audio",
+    500
+   ],
+   [
+    "Almacenamiento",
+    300
+   ],
+   [
+    "Periféricos",
+    240
+   ]
+  ]
+ },
+ "02_clientes_sin_pedidos": {
+  "columnas": [
+   "id_cliente",
+   "nombre"
+  ],
+  "filas": [
+   [
+    8,
+    "Iván Mora"
+   ],
+   [
+    10,
+    "Sofía Díaz"
+   ]
+  ]
+ },
+ "03_top_producto_por_categoria": {
+  "columnas": [
+   "categoria",
+   "producto",
+   "unidades"
+  ],
+  "filas": [
+   [
+    "Almacenamiento",
+    "Disco SSD",
+    3
+   ],
+   [
+    "Audio",
+    "Altavoz",
+    4
+   ],
+   [
+    "Monitores",
+    "Monitor",
+    3
+   ],
+   [
+    "Periféricos",
+    "Ratón",
+    3
+   ],
+   [
+    "Portátiles",
+    "Portátil",
+    2
+   ]
+  ]
+ },
+ "04_total_acumulado": {
+  "columnas": [
+   "fecha",
+   "importe_dia",
+   "importe_acumulado"
+  ],
+  "filas": [
+   [
+    "2025-01-03",
+    90,
+    90
+   ],
+   [
+    "2025-01-04",
+    200,
+    290
+   ],
+   [
+    "2025-01-05",
+    60,
+    350
+   ],
+   [
+    "2025-01-09",
+    900,
+    1250
+   ],
+   [
+    "2025-01-10",
+    160,
+    1410
+   ],
+   [
+    "2025-02-02",
+    90,
+    1500
+   ],
+   [
+    "2025-02-03",
+    200,
+    1700
+   ],
+   [
+    "2025-02-04",
+    200,
+    1900
+   ],
+   [
+    "2025-02-14",
+    380,
+    2280
+   ],
+   [
+    "2025-03-01",
+    100,
+    2380
+   ],
+   [
+    "2025-03-02",
+    900,
+    3280
+   ],
+   [
+    "2025-03-03",
+    135,
+    3415
+   ]
+  ]
+ },
+ "05_crecimiento_mensual": {
+  "columnas": [
+   "mes",
+   "importe",
+   "variacion_pct"
+  ],
+  "filas": [
+   [
+    "2025-01",
+    1410,
+    null
+   ],
+   [
+    "2025-02",
+    870,
+    -38.3
+   ],
+   [
+    "2025-03",
+    1135,
+    30.5
+   ]
+  ]
+ },
+ "06_deduplicar_cargas": {
+  "columnas": [
+   "id_pedido",
+   "estado",
+   "importe"
+  ],
+  "filas": [
+   [
+    201,
+    "entregado",
+    50
+   ],
+   [
+    202,
+    "cancelado",
+    30
+   ],
+   [
+    203,
+    "pendiente",
+    75
+   ],
+   [
+    204,
+    "enviado",
+    120
+   ]
+  ]
+ },
+ "07_huecos_e_islas": {
+  "columnas": [
+   "inicio",
+   "fin",
+   "dias"
+  ],
+  "filas": [
+   [
+    "2025-01-03",
+    "2025-01-05",
+    3
+   ],
+   [
+    "2025-01-08",
+    "2025-01-10",
+    3
+   ],
+   [
+    "2025-02-02",
+    "2025-02-04",
+    3
+   ],
+   [
+    "2025-02-14",
+    "2025-02-15",
+    2
+   ],
+   [
+    "2025-03-01",
+    "2025-03-03",
+    3
+   ],
+   [
+    "2025-03-20",
+    "2025-03-20",
+    1
+   ]
+  ]
+ },
+ "08_sesiones_web": {
+  "columnas": [
+   "id_cliente",
+   "sesiones",
+   "eventos",
+   "eventos_por_sesion"
+  ],
+  "filas": [
+   [
+    1,
+    2,
+    5,
+    2.5
+   ],
+   [
+    2,
+    2,
+    4,
+    2
+   ],
+   [
+    3,
+    1,
+    1,
+    1
+   ]
+  ]
+ },
+ "09_pivot_por_mes": {
+  "columnas": [
+   "categoria",
+   "enero",
+   "febrero",
+   "marzo",
+   "total"
+  ],
+  "filas": [
+   [
+    "Almacenamiento",
+    0,
+    2,
+    1,
+    3
+   ],
+   [
+    "Audio",
+    3,
+    3,
+    1,
+    7
+   ],
+   [
+    "Monitores",
+    1,
+    2,
+    0,
+    3
+   ],
+   [
+    "Periféricos",
+    4,
+    2,
+    1,
+    7
+   ],
+   [
+    "Portátiles",
+    1,
+    0,
+    1,
+    2
+   ]
+  ]
+ },
+ "10_calidad_de_datos": {
+  "columnas": [
+   "regla",
+   "incidencias"
+  ],
+  "filas": [
+   [
+    "clientes sin email",
+    1
+   ],
+   [
+    "emails repetidos",
+    1
+   ],
+   [
+    "líneas con cantidad <= 0",
+    1
+   ],
+   [
+    "líneas con producto inexistente",
+    1
+   ],
+   [
+    "pedidos sin líneas",
+    1
+   ]
+  ]
+ },
+ "11_upsert_incremental": {
+  "columnas": [
+   "id_cliente",
+   "nombre",
+   "ciudad"
+  ],
+  "filas": [
+   [
+    1,
+    "Ana Torres",
+    "Madrid"
+   ],
+   [
+    2,
+    "Luis Pardo",
+    "Sevilla"
+   ],
+   [
+    3,
+    "Marta Gil",
+    "Valencia"
+   ],
+   [
+    4,
+    "Pedro Sanz",
+    "Valencia"
+   ],
+   [
+    5,
+    "Carmen Ruiz",
+    "Bilbao"
+   ],
+   [
+    6,
+    "Jorge Vega",
+    "Barcelona"
+   ],
+   [
+    7,
+    "Rosa León",
+    "Málaga"
+   ],
+   [
+    8,
+    "Iván Mora",
+    "Zaragoza"
+   ],
+   [
+    9,
+    "Carmen R.",
+    "Bilbao"
+   ],
+   [
+    10,
+    "Sofía Díaz",
+    "Granada"
+   ],
+   [
+    11,
+    "Elena Ríos",
+    "Madrid"
+   ]
+  ]
+ },
+ "12_scd_tipo_2": {
+  "columnas": [
+   "id_cliente",
+   "ciudad",
+   "valido_desde",
+   "valido_hasta",
+   "es_actual"
+  ],
+  "filas": [
+   [
+    1,
+    "Madrid",
+    "2024-01-10",
+    null,
+    1
+   ],
+   [
+    2,
+    "Sevilla",
+    "2024-02-05",
+    null,
+    1
+   ],
+   [
+    3,
+    "Valencia",
+    "2024-02-20",
+    null,
+    1
+   ],
+   [
+    4,
+    "Madrid",
+    "2024-03-15",
+    "2025-03-31",
+    0
+   ],
+   [
+    4,
+    "Valencia",
+    "2025-03-31",
+    null,
+    1
+   ],
+   [
+    5,
+    "Bilbao",
+    "2024-04-01",
+    null,
+    1
+   ],
+   [
+    6,
+    "Barcelona",
+    "2024-04-18",
+    null,
+    1
+   ],
+   [
+    7,
+    "Málaga",
+    "2024-05-02",
+    null,
+    1
+   ],
+   [
+    8,
+    "Zaragoza",
+    "2024-05-20",
+    null,
+    1
+   ],
+   [
+    9,
+    "Bilbao",
+    "2024-06-11",
+    null,
+    1
+   ],
+   [
+    10,
+    "Granada",
+    "2024-06-30",
+    null,
+    1
+   ],
+   [
+    11,
+    "Madrid",
+    "2025-03-01",
+    null,
+    1
+   ]
+  ]
+ },
+ "13_jerarquia_recursiva": {
+  "columnas": [
+   "id_empleado",
+   "nombre",
+   "nivel",
+   "ruta"
+  ],
+  "filas": [
+   [
+    1,
+    "Laura",
+    1,
+    "Laura"
+   ],
+   [
+    2,
+    "Diego",
+    2,
+    "Laura > Diego"
+   ],
+   [
+    5,
+    "Alba",
+    3,
+    "Laura > Diego > Alba"
+   ],
+   [
+    4,
+    "Hugo",
+    3,
+    "Laura > Diego > Hugo"
+   ],
+   [
+    7,
+    "Nerea",
+    4,
+    "Laura > Diego > Hugo > Nerea"
+   ],
+   [
+    3,
+    "Paula",
+    2,
+    "Laura > Paula"
+   ],
+   [
+    6,
+    "Raúl",
+    3,
+    "Laura > Paula > Raúl"
+   ]
+  ]
+ }
+}
